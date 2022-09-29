@@ -34,4 +34,5 @@ public class Human {
         return "Привет!" + " Меня зовут " + name + ". Я из города " + town +
                 ". Я родился в " + yearOfBirth + " году. Я работаю на должности " + jobTitle + " Будем знакомы!";
     }
+
 }

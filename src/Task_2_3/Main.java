@@ -28,4 +28,5 @@ public class Main {
         System.out.println(kiaSportage4);
         System.out.println(hyundaiAvante);
     }
+
 }

@@ -5,4 +5,5 @@ public class Human {
     String name;
     String town;
     String jobTitle;
+
 }
