@@ -1,4 +1,4 @@
-package Task_1;
+package task_1;
 
 public class Car {
     String brand;
