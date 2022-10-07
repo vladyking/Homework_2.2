@@ -16,7 +16,7 @@ public class Car {
     private final int numberOfSeats;
     private boolean summerTyres;
     private Key key;
-    private Insuranse insuranse;
+    private Insurance insurance;
 
     public static class Key {
         private final boolean remoteEngineStart;
@@ -87,12 +87,13 @@ public class Car {
                 System.out.println("Нужно срочно ехать оформлять новую страховку");
             }
         }
+
     }
 
     public Car(String brand, String model, double engineVolume, String color,
                String productionCountry, int productionYear, String transmission,
                String bodyType, String registrationNumber, int numberOfSeats,
-               boolean summerTyres, Key key, Insuranse insuranse) {
+               boolean summerTyres, Key key, Insurance insurance) {
 
         if (brand == null || brand.isEmpty() || brand.isBlank()) {
             this.brand = "default";
@@ -162,10 +163,10 @@ public class Car {
             this.key = key;
         }
 
-        if (insuranse == null) {
-            this.insuranse = new Insuranse();
+        if (insurance == null) {
+            this.insurance = new Insurance();
         } else {
-            this.insuranse = insuranse;
+            this.insurance = insurance;
         }
     }
 
@@ -245,14 +246,13 @@ public class Car {
         this.key = key;
     }
 
-    public Insuranse getInsuranse() {
-        return insuranse;
+    public Insurance getInsurance() {
+        return insurance;
     }
 
-    public void setInsuranse(Insurance insuranse) {
-        this.insuranse = insuranse;
+    public void setInsurance(Insurance insurance) {
+        this.insurance = insurance;
     }
-
 
     //Проверка правильности написания номера авто (x000xx000)
     public boolean checkRegNumber() {
@@ -282,7 +282,9 @@ public class Car {
     public String toString() {
         return brand + " " + model + " " + engineVolume + " " + color + " " +
                 productionCountry + " " + productionYear + " " + transmission + " " +
-                bodyType + " " + registrationNumber + " " + numberOfSeats + " " + summerTyres
-                + " " + getKey() + " " + getInsuranse();
+                bodyType + " " + registrationNumber + " " + numberOfSeats + " " + summerTyres + " " +
+                getKey().keylessEntry + " " + getKey().remoteEngineStart + " " +
+                getInsurance().endDateInsurance + " " + getInsurance().costInsurance + " " +
+                getInsurance().numberInsurance;
     }
 }

@@ -28,23 +28,28 @@ public class Main {
 
         Car ladaGranta = new Car("lada", "Granta", 1.6, "Yellow",
                 "Russia", 2015, "МКПП",
-                "Sedan", "a111aa999", 5, true);
+                "Sedan", "a111aa999", 5, true,
+                new Car.Key(), new Car.Insurance());
 
         Car audiA8L50TDIQuattro = new Car("Audi", "A8 L 50 TDI Quattro", 3.0, "Black",
                 "Germany", 2020, "АКПП", "Sedan",
-                "b222bb888", 5, true);
+                "b222bb888", 5, true,
+                new Car.Key(), new Car.Insurance());
 
         Car bmwZ8 = new Car("BMW", "Z8", 4.9, "Black",
                 "Germany", 2003, "АКПП", "Roadster",
-                "c333cc777", 2, true);
+                "c333cc777", 2, true,
+                new Car.Key(), new Car.Insurance());
 
         Car kiaSportage4 = new Car("KIA", "Sportage4", 2.4, "Red",
                 "South Korea", 2018, "АКПП", "Сrossover",
-                "d444dd666", 5, true);
+                "d444dd666", 5, true,
+                new Car.Key(), new Car.Insurance());
 
         Car hyundaiAvante = new Car("Hyundai", "Avante", 1.6, "Orange",
                 "South Korea", 2016, "АКПП", "Sedan",
-                "e555ee555", 5, true);
+                "e555ee555", 5, true,
+                new Car.Key(), new Car.Insurance());
 
         System.out.println(ladaGranta);
         System.out.println(audiA8L50TDIQuattro);
@@ -104,6 +109,4 @@ public class Main {
         }
         System.out.println("Букет простоит " + minLifeSpan + " суток");
     }
-
-    public static void
 }
