@@ -1,6 +1,6 @@
 package Animals;
 
-public class Flightless extends Birds {
+public class Flightless extends Bird {
     private String movementType;
 
     public void walk() {
@@ -22,6 +22,15 @@ public class Flightless extends Birds {
 
     public void setMovementType(String movementType) {
         this.movementType = movementType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Flightless that = (Flightless) o;
+        return movementType.equals(that.movementType);
     }
 
     @Override

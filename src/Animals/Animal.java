@@ -1,6 +1,6 @@
 package Animals;
 
-public abstract class Animals {
+public abstract class Animal {
     private String animalName;
     private int age;
 
@@ -12,7 +12,7 @@ public abstract class Animals {
 
     public abstract void move();
 
-    public Animals(String animalName, int age) {
+    public Animal(String animalName, int age) {
         if (animalName != null && !animalName.isBlank()) {
             this.animalName = animalName;
         } else {
@@ -41,5 +41,13 @@ public abstract class Animals {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return age == animal.age && animalName.equals(animal.animalName);
     }
 }

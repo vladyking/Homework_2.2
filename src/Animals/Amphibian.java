@@ -1,13 +1,13 @@
 package Animals;
 
-public class Amphibians extends Animals {
+public class Amphibian extends Animal {
     private String livingEnvironment;
 
     public void hunts() {
-        System.out.println("I'm hunts!");
+        System.out.println("I hunt from the brood in the water!");
     }
 
-    public Amphibians(String animalName, int age, String livingEnvironment) {
+    public Amphibian(String animalName, int age, String livingEnvironment) {
         super(animalName, age);
         if (livingEnvironment != null && !livingEnvironment.isBlank()) {
             this.livingEnvironment = livingEnvironment;
@@ -32,6 +32,15 @@ public class Amphibians extends Animals {
     @Override
     public void move() {
         System.out.println("I'm move!");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Amphibian amphibian = (Amphibian) o;
+        return livingEnvironment.equals(amphibian.livingEnvironment);
     }
 
     @Override

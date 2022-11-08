@@ -1,14 +1,14 @@
 package Animals;
 
-public class Mammals extends Animals {
+public class Mammal extends Animal {
     private String livingEnvironment;
     private int movementSpeed;
 
     public void walk() {
-        System.out.println("I'm walk!");
+        System.out.println("I'm running!");
     }
 
-    public Mammals(String animalName, int age, String livingEnvironment, int movementSpeed) {
+    public Mammal(String animalName, int age, String livingEnvironment, int movementSpeed) {
         super(animalName, age);
         if (livingEnvironment != null && !livingEnvironment.isBlank()) {
             this.livingEnvironment = livingEnvironment;
@@ -47,5 +47,13 @@ public class Mammals extends Animals {
     @Override
     public void move() {
         System.out.println("I'm move!");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mammal mammal = (Mammal) o;
+        return movementSpeed == mammal.movementSpeed && livingEnvironment.equals(mammal.livingEnvironment);
     }
 }

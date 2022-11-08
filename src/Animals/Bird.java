@@ -1,13 +1,13 @@
 package Animals;
 
-public class Birds extends Animals {
+public class Bird extends Animal {
     private String movementType;
 
     public void hunts() {
-        System.out.println("I'm hunts!");
+        System.out.println("I hunt insects!");
     }
 
-    public Birds(String animalName, int age, String movementType) {
+    public Bird(String animalName, int age, String movementType) {
         super(animalName, age);
         if (movementType != null && !movementType.isBlank()) {
             this.movementType = movementType;
@@ -32,6 +32,15 @@ public class Birds extends Animals {
     @Override
     public void move() {
         System.out.println("I'm move!");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Bird bird = (Bird) o;
+        return movementType.equals(bird.movementType);
     }
 
 }

@@ -6,7 +6,7 @@ public abstract class Transport {
     private final String model;
     private final int productionYear;
     private final String productionCountry;
-    private String Color;
+    private String color;
     private Float maxSpeed;
     private String fuel;
     //endregion
@@ -17,7 +17,7 @@ public abstract class Transport {
         this.model = model;
         this.productionYear = productionYear;
         this.productionCountry = productionCountry;
-        this.Color = color;
+        this.color = color;
         this.maxSpeed = maxSpeed;
         this.fuel = fuel;
     }
@@ -49,14 +49,14 @@ public abstract class Transport {
     }
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public void setColor(String color) {
         if (color == null || color.isBlank()) {
-            this.Color = "Белый";
+            this.color = "Белый";
         } else {
-            this.Color = color;
+            this.color = color;
         }
     }
 
