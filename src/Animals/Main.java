@@ -1,0 +1,115 @@
+package Animals;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Задание №2.3 (Животные):");
+        System.out.println();
+
+        System.out.println("Травоядные:");
+        Herbivore gazelle = new Herbivore("газель", 3, "саванна", 70, "трава");
+        System.out.println(gazelle);
+        gazelle.eat();
+        gazelle.sleep();
+        gazelle.move();
+        gazelle.walk();
+        gazelle.graze();
+        Herbivore giraffe = new Herbivore("жираф", 5, "саванна", 30, "листья");
+        System.out.println(giraffe);
+        giraffe.eat();
+        giraffe.sleep();
+        giraffe.move();
+        giraffe.walk();
+        giraffe.graze();
+        Herbivore horse = new Herbivore("лошадь", 7, "степь", 50, "трава");
+        System.out.println(horse);
+        horse.eat();
+        horse.sleep();
+        horse.move();
+        horse.walk();
+        horse.graze();
+        System.out.println();
+
+        System.out.println("Хищники:");
+        Predator hyena = new Predator("гиена", 3, "саванна", 35, "мясо");
+        System.out.println(hyena);
+        hyena.eat();
+        hyena.sleep();
+        hyena.move();
+        hyena.hunts();
+        Predator tiger = new Predator("тигр", 5, "лес", 50, "мясо");
+        System.out.println(tiger);
+        tiger.eat();
+        tiger.sleep();
+        tiger.move();
+        tiger.hunts();
+        Predator bear = new Predator("медведь", 7, "лес", 35, "рыба");
+        System.out.println(bear);
+        bear.eat();
+        bear.sleep();
+        bear.move();
+        bear.hunts();
+        System.out.println();
+
+        System.out.println("Земноводные:");
+        Amphibian frog = new Amphibian("лягушка", 3, "болото");
+        System.out.println(frog);
+        frog.eat();
+        frog.sleep();
+        frog.move();
+        frog.hunts();
+        Amphibian freshwaterSnake = new Amphibian("уж", 5, "озеро");
+        System.out.println(freshwaterSnake);
+        freshwaterSnake.eat();
+        freshwaterSnake.sleep();
+        freshwaterSnake.move();
+        freshwaterSnake.hunts();
+        System.out.println();
+
+        System.out.println("Не летающие:");
+        Flightless peacock = new Flightless("павлин", 3, "луг", "на двух лапах");
+        System.out.println(peacock);
+        peacock.eat();
+        peacock.move();
+        peacock.sleep();
+        peacock.hunts();
+        peacock.walk();
+        Flightless penguin = new Flightless("пингвин", 5, "Южная Африка", "на двух лапах");
+        System.out.println(penguin);
+        penguin.eat();
+        penguin.move();
+        penguin.sleep();
+        penguin.hunts();
+        penguin.walk();
+        Flightless dodoBird = new Flightless("птица додо", 400, "остров Маврикий", "на двух лапах");
+        System.out.println(dodoBird);
+        dodoBird.eat();
+        dodoBird.move();
+        dodoBird.sleep();
+        dodoBird.hunts();
+        dodoBird.walk();
+        System.out.println();
+
+        System.out.println("Летающие:");
+        Flying gull = new Flying("чайка", 3, "побережье", "полёт");
+        System.out.println(gull);
+        gull.eat();
+        gull.move();
+        gull.sleep();
+        gull.hunts();
+        gull.fly();
+        Flying albatross = new Flying("альбатросс", 5, "морской остров", "полёт");
+        System.out.println(albatross);
+        albatross.eat();
+        albatross.move();
+        albatross.sleep();
+        albatross.hunts();
+        albatross.fly();
+        Flying falcon = new Flying("сокол", 7, "степь", "полёт");
+        System.out.println(falcon);
+        falcon.eat();
+        falcon.move();
+        falcon.sleep();
+        falcon.hunts();
+        falcon.fly();
+    }
+}

@@ -1,4 +1,4 @@
-package Task_1;
+package task_1;
 
 public class Car {
     String brand;
@@ -7,5 +7,4 @@ public class Car {
     String color;
     String productionCountry;
     int productionYear;
-
 }

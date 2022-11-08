@@ -1,4 +1,4 @@
-package Task_1;
+package task_1;
 
 public class Main {
     public static void main(String[] args) {
@@ -149,5 +149,4 @@ public class Main {
                 hyundaiAvante.productionCountry + " " +
                 hyundaiAvante.productionYear);
     }
-
 }
